@@ -1,0 +1,22 @@
+[package]
+name = "rust_modexp_testing"
+version = "0.1.0"
+authors = ["sean-sn <sean@supranational.net>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num-bigint = "0.2"
+num-traits = "0.2"
+
+[dependencies.gmp-mpfr-sys]
+version = "1.2"
+default-features = false
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "modexp"
+harness = false
